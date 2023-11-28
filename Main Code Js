@@ -1,0 +1,22 @@
+var numeroSecreto = parseInt(Math.random()*1001);
+var tentativasRestantes =  10;
+var tentativas = 1;
+while(tentativas < 11){
+  var chute = prompt('chute de 1 a 1000');
+if (chute == numeroSecreto){
+  alert('voce acertou seu chupeta mama minhas bola');
+  break
+}else if (chute > numeroSecreto){
+  alert('voce errou, o numero e menor');
+}else if (chute < numeroSecreto){
+  alert("o numero e maior");
+} 
+  tentativasRestantes--;
+    if (tentativasRestantes >= 1){
+      alert ('você tem ' + tentativasRestantes + ' tentativas restantes');
+    }
+      tentativas++;
+}
+if (tentativas == 11) {
+  alert('Suas tentativas acabaram. O número secreto era ' + numeroSecreto);
+}
